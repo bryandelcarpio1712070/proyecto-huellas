@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Home Page";
+    var noticias = (List<P_Adopcion>)ViewBag.noticias;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Animales En Adopcion</h1>
+    <table class="table table-bordered table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Propietario</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Descripcion de la mascota</th>
+              <th scope="col">Foto</th>
+            </tr>
+          </thead>
+    @foreach(var n in noticias) {        
+        
+          <tbody>
+            <tr>
+              <td style="width: 350px">@n.Usuario</td>
+              <td Style="width: 200px">@n.NumTelefono</td>   
+              <td style="width: 450x">@n.Descripcion</td>
+              <td><img src="@n.Imagen" alt="" style="width: 120px; height: 100px" ></td>
+
+            </tr>
+          </tbody>}
+        </table>
+    
+</div>

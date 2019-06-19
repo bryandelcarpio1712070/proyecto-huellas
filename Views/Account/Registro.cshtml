@@ -1,0 +1,47 @@
+@model RegistroViewModel;
+
+
+<div class="card bg-dark text-white">
+  <img src="https://gcdn.emol.cl/proteccion-animal/files/2018/05/1503695580_perro-1336.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <div style="margin:0 auto" class="text-center"><h1 class="card-title">Registrar  usuario</h1></div> 
+
+	<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+							</div>
+						</div>
+						<hr>
+</div>
+
+<form asp-action="registro" method="post">
+    <div asp-validation-summary="All"></div>
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label" >Nombre</label>
+    <div class="col-sm-5">
+    <input type="text" class="form-control" asp-for="Usuario" id="nombre" aria-describedby="emailHelp" placeholder="ingrese nombre ">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-5">
+      <input type="text"  class="form-control" asp-for="Email"id="Email" aria-describedby="emailHelp" placeholder="ingrese Email ">
+    </div>
+  </div>
+
+  <div class="form-group row">
+     <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-5">
+      <input type="password" class="form-control" asp-for="Password" id="Email" id="inputPassword" placeholder="Password">
+    </div>
+  </div>
+
+<div class="form-group">
+	<div class="text-center">
+		<div class="col-md-6 col-md-offset-3" style="margin:0 auto">
+			<input type="submit" name="register" id="register" tabindex="4" class="form-control btn btn-primary" value="crear cuenta"/>
+		</div>
+	</div>
+</div>  
+</form>

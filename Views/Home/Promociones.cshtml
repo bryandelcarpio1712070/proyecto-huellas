@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Home Page";
+    var noticias = (List<P_Veterinarias>)ViewBag.noticias;
+}
+
+<div class="text-center">
+    <h2 class="display-4">Proximos Eventos</h2>
+    @foreach(var n in noticias) {      
+    <table class="table table-bordered table-dark">
+          <thead>
+            <tr>
+              
+              <th scope="col"><img src="@n.Imagen" alt="" style="width: 500px; height: 400px" ></th>
+              <th scope="col" style="width: 500px">@n.Descripcion</th>
+            </tr>
+          </thead>
+      
+        
+         
+        </table>}
+    
+</div>
